@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-10-01",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "nativeName": "English",
+      "whisperCode": "en",
+      "engines": {
+        "ios": {
+          "type": "apple-speech"
+        },
+        "android": {
+          "type": "whisper",
+          "model": "en-whisper-small-q5_1"
+        }
+      }
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "nativeName": "മലയാളം",
+      "whisperCode": "ml",
+      "detectAs": [
+        "ml",
+        "ta",
+        "te",
+        "kn",
+        "si"
+      ],
+      "engines": {
+        "ios": {
+          "type": "whisper",
+          "model": "ml-turbo-indicvoices-q8_0"
+        },
+        "android": {
+          "type": "whisper",
+          "model": "ml-turbo-indicvoices-q8_0"
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "ml-turbo-indicvoices-q8_0",
+      "language": "ml",
+      "displayName": "Malayalam · Whisper large-v3 turbo (IndicVoices)",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://github.com/rahnas/wize-notes-models/releases/download/ml-turbo-indicvoices-v1/ggml-ml-turbo-indicvoices-q8_0.bin",
+      "bytes": 874188075,
+      "sha256": "bf5fef47fa6e89a80a603e9d42d133c88be2c30b5de2eb1d807492191c65e150",
+      "license": "Apache-2.0",
+      "source": "https://huggingface.co/BettySara/whisper-large-v3-malayalam-FT",
+      "attribution": "Fine-tuned from OpenAI Whisper large-v3-turbo (MIT) on the Malayalam subset of AI4Bharat IndicVoices (CC BY 4.0).",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/ml-turbo-indicvoices-q8_0.md",
+      "mirrors": []
+    },
+    {
+      "id": "en-whisper-small-q5_1",
+      "language": "en",
+      "displayName": "English · Whisper small.en",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-small.en-q5_1.bin",
+      "bytes": 190098681,
+      "sha256": "bfdff4894dcb76bbf647d56263ea2a96645423f1669176f4844a1bf8e478ad30",
+      "license": "MIT",
+      "source": "https://huggingface.co/ggerganov/whisper.cpp",
+      "attribution": "OpenAI Whisper small.en (MIT), converted by the whisper.cpp project (MIT).",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/en-whisper-small-q5_1.md",
+      "mirrors": []
+    }
+  ]
+}
