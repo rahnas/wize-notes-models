@@ -12,7 +12,7 @@
 ## Why this model
 
 Compared with whisper.cpp (beam 5, Silero VAD) on real conversational Malayalam recorded with a
-Neo 1 pendant, against two smaller community fine-tunes and AI4Bharat IndicWhisper (medium), it was the only
+Bluetooth recording pendant, against two smaller community fine-tunes and AI4Bharat IndicWhisper (medium), it was the only
 one that produced natural, correctly spelled sentences:
 
 | Model | Real clip |
