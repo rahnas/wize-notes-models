@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "languages": [
     {
       "code": "en",
@@ -15,6 +15,31 @@
           "type": "whisper",
           "model": "en-whisper-small-q5_1"
         }
+      },
+      "options": {
+        "ios": [
+          {
+            "type": "apple-speech",
+            "note": "Built in, fastest"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "Better with strong accents or mixed languages"
+          }
+        ],
+        "android": [
+          {
+            "type": "whisper",
+            "model": "en-whisper-small-q5_1",
+            "note": "Fast"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "More accurate, slower"
+          }
+        ]
       }
     },
     {
@@ -38,6 +63,165 @@
           "type": "whisper",
           "model": "ml-turbo-indicvoices-q8_0"
         }
+      },
+      "options": {
+        "ios": [
+          {
+            "type": "whisper",
+            "model": "ml-turbo-indicvoices-q8_0",
+            "note": "Best for everyday Malayalam"
+          },
+          {
+            "type": "whisper",
+            "model": "ml-indicwhisper-medium-q8_0",
+            "note": "Often better when English words are mixed in"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          },
+          {
+            "type": "whisper",
+            "model": "ml-codemixed-small-q5_0",
+            "note": "Fast, small download; best for clear speech"
+          }
+        ],
+        "android": [
+          {
+            "type": "whisper",
+            "model": "ml-turbo-indicvoices-q8_0",
+            "note": "Best for everyday Malayalam"
+          },
+          {
+            "type": "whisper",
+            "model": "ml-indicwhisper-medium-q8_0",
+            "note": "Often better when English words are mixed in"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          },
+          {
+            "type": "whisper",
+            "model": "ml-codemixed-small-q5_0",
+            "note": "Fast, small download; best for clear speech"
+          }
+        ]
+      }
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "nativeName": "हिन्दी",
+      "whisperCode": "hi",
+      "detectAs": [
+        "hi",
+        "ur",
+        "mr",
+        "ne"
+      ],
+      "engines": {
+        "ios": {
+          "type": "whisper",
+          "model": "whisper-large-v3-turbo-q8_0"
+        },
+        "android": {
+          "type": "whisper",
+          "model": "whisper-large-v3-turbo-q8_0"
+        }
+      },
+      "options": {
+        "ios": [
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "Recommended"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Similar accuracy, slower"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          }
+        ],
+        "android": [
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "Recommended"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Similar accuracy, slower"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          }
+        ]
+      }
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "nativeName": "العربية",
+      "whisperCode": "ar",
+      "detectAs": [
+        "ar"
+      ],
+      "rtl": true,
+      "engines": {
+        "ios": {
+          "type": "apple-speech"
+        },
+        "android": {
+          "type": "whisper",
+          "model": "whisper-large-v3-turbo-q8_0"
+        }
+      },
+      "options": {
+        "ios": [
+          {
+            "type": "apple-speech",
+            "note": "Built in · Modern Standard and Gulf Arabic"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "Strong on standard Arabic"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          }
+        ],
+        "android": [
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-turbo-q8_0",
+            "note": "Strong on standard Arabic"
+          },
+          {
+            "type": "whisper",
+            "model": "whisper-large-v3-q5_0",
+            "note": "Translates the speech into English — easiest to read when a transcript is unclear",
+            "task": "translate"
+          }
+        ]
       }
     }
   ],
@@ -45,7 +229,7 @@
     {
       "id": "ml-turbo-indicvoices-q8_0",
       "language": "ml",
-      "displayName": "Malayalam · Whisper large-v3 turbo (IndicVoices)",
+      "displayName": "Malayalam · large-v3 turbo (IndicVoices)",
       "format": "ggml",
       "engine": "whisper.cpp",
       "minEngineVersion": "1.9.4",
@@ -61,7 +245,7 @@
     {
       "id": "en-whisper-small-q5_1",
       "language": "en",
-      "displayName": "English · Whisper small.en",
+      "displayName": "Whisper small.en",
       "format": "ggml",
       "engine": "whisper.cpp",
       "minEngineVersion": "1.9.4",
@@ -72,6 +256,70 @@
       "source": "https://huggingface.co/ggerganov/whisper.cpp",
       "attribution": "OpenAI Whisper small.en (MIT), converted by the whisper.cpp project (MIT).",
       "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/en-whisper-small-q5_1.md",
+      "mirrors": []
+    },
+    {
+      "id": "whisper-large-v3-turbo-q8_0",
+      "language": "multi",
+      "displayName": "Whisper large-v3 turbo",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q8_0.bin",
+      "bytes": 874188075,
+      "sha256": "317eb69c11673c9de1e1f0d459b253999804ec71ac4c23c17ecf5fbe24e259a1",
+      "license": "MIT",
+      "source": "https://huggingface.co/ggerganov/whisper.cpp",
+      "attribution": "OpenAI Whisper large-v3-turbo (MIT), converted by the whisper.cpp project (MIT).",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/whisper-large-v3-turbo-q8_0.md",
+      "mirrors": []
+    },
+    {
+      "id": "whisper-large-v3-q5_0",
+      "language": "multi",
+      "displayName": "Whisper large-v3",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-q5_0.bin",
+      "bytes": 1081140203,
+      "sha256": "d75795ecff3f83b5faa89d1900604ad8c780abd5739fae406de19f23ecd98ad1",
+      "license": "MIT",
+      "source": "https://huggingface.co/ggerganov/whisper.cpp",
+      "attribution": "OpenAI Whisper large-v3 (MIT), converted by the whisper.cpp project (MIT).",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/whisper-large-v3-q5_0.md",
+      "mirrors": []
+    },
+    {
+      "id": "ml-indicwhisper-medium-q8_0",
+      "language": "ml",
+      "displayName": "Malayalam · IndicWhisper (AI4Bharat)",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://github.com/rahnas/wize-notes-models/releases/download/ml-indicwhisper-medium-v1/ggml-ml-indicwhisper-medium-q8_0.bin",
+      "bytes": 823369796,
+      "sha256": "70e9a1dd36136e8548e5ec27de34862ff568189d2eaf9a756e7c7ea59c4a57c0",
+      "license": "MIT",
+      "source": "https://huggingface.co/kavyamanohar/AI4B-Indicwhisper-ml",
+      "attribution": "AI4Bharat IndicWhisper (Vistaar), Malayalam, based on OpenAI Whisper medium (MIT).",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/ml-indicwhisper-medium-q8_0.md",
+      "mirrors": []
+    },
+    {
+      "id": "ml-codemixed-small-q5_0",
+      "language": "ml",
+      "displayName": "Malayalam · small code-mixed",
+      "format": "ggml",
+      "engine": "whisper.cpp",
+      "minEngineVersion": "1.9.4",
+      "url": "https://github.com/rahnas/wize-notes-models/releases/download/ml-codemixed-small-v1/ggml-ml-codemixed-small-q5_0.bin",
+      "bytes": 175209680,
+      "sha256": "851d1db2159fa46f5a71a94f5c12540ae740fc813ff9285e93a93208843b4fca",
+      "license": "Apache-2.0",
+      "source": "https://huggingface.co/kavyamanohar/whisper-small-ml-codemixed",
+      "attribution": "Fine-tuned by Kavya Manohar from OpenAI Whisper small (MIT) on Malayalam–English code-mixed speech.",
+      "card": "https://github.com/rahnas/wize-notes-models/blob/main/models/ml-codemixed-small-q5_0.md",
       "mirrors": []
     }
   ]

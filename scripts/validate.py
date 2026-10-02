@@ -11,9 +11,12 @@ for m in c["models"]:
         assert m.get(k) not in (None, "", 0, "PENDING"), f"{m['id']}: missing {k}"
     assert len(m["sha256"]) == 64, f"{m['id']}: bad sha256"
 for lang in c["languages"]:
-    for platform, engine in lang["engines"].items():
+    engines = [(p, e) for p, e in lang["engines"].items()]
+    engines += [(p, e) for p, opts in lang.get("options", {}).items() for e in opts]
+    for platform, engine in engines:
         if engine["type"] == "whisper":
             assert engine["model"] in ids, f"{lang['code']}/{platform}: unknown model {engine['model']}"
+            assert engine.get("task") in (None, "translate"), f"{lang['code']}: bad task {engine.get('task')}"
 if "--remote" in sys.argv:
     for m in c["models"]:
         req = urllib.request.Request(m["url"], method="HEAD")

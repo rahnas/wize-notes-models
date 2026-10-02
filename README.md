@@ -30,12 +30,15 @@ whichever host serves them.
 
 ## Available
 
-| Language | Model | Size | License |
-|---|---|---|---|
-| Malayalam (മലയാളം) | [Whisper large-v3 turbo, IndicVoices fine-tune, q8_0](models/ml-turbo-indicvoices-q8_0.md) | 874 MB | Apache-2.0 |
-| English (Android) | [Whisper small.en, q5_1](models/en-whisper-small-q5_1.md) | 190 MB | MIT |
+| Language | Options (recommended first) |
+|---|---|
+| English | iOS: Apple on-device speech · [Whisper large-v3 turbo](models/whisper-large-v3-turbo-q8_0.md). Android: [Whisper small.en](models/en-whisper-small-q5_1.md) · turbo |
+| Malayalam (മലയാളം) | [large-v3 turbo IndicVoices](models/ml-turbo-indicvoices-q8_0.md) · [IndicWhisper](models/ml-indicwhisper-medium-q8_0.md) · English translation ([large-v3](models/whisper-large-v3-q5_0.md)) · [small code-mixed](models/ml-codemixed-small-q5_0.md) |
+| Hindi (हिन्दी) | [Whisper large-v3 turbo](models/whisper-large-v3-turbo-q8_0.md) · [large-v3](models/whisper-large-v3-q5_0.md) · English translation |
+| Arabic (العربية) | iOS: Apple on-device speech (ar-SA) · turbo · English translation. Android: turbo · English translation |
 
-On iOS, English uses Apple's on-device speech recognition and needs no download.
+Languages can list several `options` per platform; users pick a default per language and can re-transcribe any
+recording with another option. An option with `"task": "translate"` produces an English translation instead of a transcript.
 
 ## Adding a language
 
